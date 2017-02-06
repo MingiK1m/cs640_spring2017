@@ -112,6 +112,9 @@ public class Iperfer {
 				}
 				time_end_ns = System.nanoTime();
 				
+				cli_sock.close();
+				srv_sock.close();
+				
 				// 4. Print results
 				double time_elapse_sec = (double)(time_end_ns - time_start_ns)/NS_TO_SEC;
 				long rcv_kb = total_bytes/1000; // 1000B as 1KB
