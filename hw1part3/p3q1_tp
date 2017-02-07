@@ -1,0 +1,37 @@
+L1
+
+mininet> h1 java Iperfer -s -p 9090&
+mininet> h2 java Iperfer -c -h "10.0.0.1" -p 9090 -t 20
+sent=57215KB rate=21.08686912832655Mbps
+received=57215KB rate=18.895472341517735Mbps
+
+L2
+
+mininet> h2 java Iperfer -s -p 9090&
+mininet> h3 java Iperfer -c -h "10.0.0.2" -p 9090 -t 20
+sent=107410KB rate=39.86865735184103Mbps
+received=107410KB rate=38.146965662092235Mbps
+
+L3
+
+mininet> h3 java Iperfer -s -p 9090&
+mininet> h4 java Iperfer -c -h "10.0.0.3" -p 9090 -t 20
+sent=83133KB rate=31.749107587283927Mbps
+received=83133KB rate=28.443986372926233Mbps
+
+L4
+
+mininet> h2 java Iperfer -s -p 9090&
+mininet> h5 java Iperfer -c -h "10.0.0.2" -p 9090 -t 20
+sent=70952KB rate=27.368745543557445Mbps
+received=70952KB rate=23.880298773916063Mbps
+
+L5
+
+mininet> h3 java Iperfer -s -p 9090&
+mininet> h6 java Iperfer -c -h "10.0.0.3" -p 9090 -t 20
+sent=71893KB rate=27.330432704459295Mbps
+mininet> h3 ls
+received=71893KB rate=23.894425901309603Mbps
+
+

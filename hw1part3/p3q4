@@ -1,0 +1,73 @@
+h1 java Iperfer -s -p 9090 > h1.txt &
+h5 java Iperfer -s -p 9090 > h5.txt &
+
+h4 java Iperfer -c -h "10.0.0.1" -p 9090 -t 20 > h4.txt &
+h6 java Iperfer -c -h "10.0.0.5" -p 9090 -t 20 > h6.txt &
+
+h1
+received=42217KB rate=15.03758909193384Mbps
+h5
+received=65034KB rate=22.00191828696449Mbps
+h4
+sent=42217KB rate=16.664406802954897Mbps
+h6
+sent=65034KB rate=24.61649649200958Mbps
+
+
+h1 ping 10.0.0.4 -c 20 > q4_ping_h1_h4 &
+h5 ping 10.0.0.6 -c 20 > q4_ping_h5_h6 &
+
+PING 10.0.0.4 (10.0.0.4) 56(84) bytes of data.
+64 bytes from 10.0.0.4: icmp_seq=1 ttl=64 time=168 ms
+64 bytes from 10.0.0.4: icmp_seq=2 ttl=64 time=164 ms
+64 bytes from 10.0.0.4: icmp_seq=3 ttl=64 time=161 ms
+64 bytes from 10.0.0.4: icmp_seq=4 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=5 ttl=64 time=161 ms
+64 bytes from 10.0.0.4: icmp_seq=6 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=7 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=8 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=9 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=10 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=11 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=12 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=13 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=14 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=15 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=16 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=17 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=18 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=19 ttl=64 time=160 ms
+64 bytes from 10.0.0.4: icmp_seq=20 ttl=64 time=160 ms
+
+--- 10.0.0.4 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19004ms
+rtt min/avg/max/mdev = 160.364/161.113/168.770/1.982 ms
+
+
+PING 10.0.0.6 (10.0.0.6) 56(84) bytes of data.
+64 bytes from 10.0.0.6: icmp_seq=1 ttl=64 time=50.1 ms
+64 bytes from 10.0.0.6: icmp_seq=2 ttl=64 time=44.3 ms
+64 bytes from 10.0.0.6: icmp_seq=3 ttl=64 time=41.1 ms
+64 bytes from 10.0.0.6: icmp_seq=4 ttl=64 time=40.4 ms
+64 bytes from 10.0.0.6: icmp_seq=5 ttl=64 time=40.4 ms
+64 bytes from 10.0.0.6: icmp_seq=6 ttl=64 time=40.6 ms
+64 bytes from 10.0.0.6: icmp_seq=7 ttl=64 time=40.3 ms
+64 bytes from 10.0.0.6: icmp_seq=8 ttl=64 time=40.4 ms
+64 bytes from 10.0.0.6: icmp_seq=9 ttl=64 time=40.4 ms
+64 bytes from 10.0.0.6: icmp_seq=10 ttl=64 time=40.4 ms
+64 bytes from 10.0.0.6: icmp_seq=11 ttl=64 time=40.6 ms
+64 bytes from 10.0.0.6: icmp_seq=12 ttl=64 time=40.5 ms
+64 bytes from 10.0.0.6: icmp_seq=13 ttl=64 time=40.4 ms
+64 bytes from 10.0.0.6: icmp_seq=14 ttl=64 time=40.4 ms
+64 bytes from 10.0.0.6: icmp_seq=15 ttl=64 time=40.3 ms
+64 bytes from 10.0.0.6: icmp_seq=16 ttl=64 time=40.3 ms
+64 bytes from 10.0.0.6: icmp_seq=17 ttl=64 time=40.4 ms
+64 bytes from 10.0.0.6: icmp_seq=18 ttl=64 time=40.4 ms
+64 bytes from 10.0.0.6: icmp_seq=19 ttl=64 time=40.4 ms
+64 bytes from 10.0.0.6: icmp_seq=20 ttl=64 time=40.4 ms
+
+--- 10.0.0.6 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19029ms
+rtt min/avg/max/mdev = 40.366/41.176/50.140/2.236 ms
+
+
